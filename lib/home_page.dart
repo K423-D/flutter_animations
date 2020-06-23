@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 09:57:01
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-22 18:17:11
+ * @LastEditTime : 2020-06-23 13:55:28
  * @FilePath     : \flutter_animations\lib\home_page.dart
  */
 import 'package:flutter/material.dart';
@@ -42,6 +42,11 @@ class _MyHomePageState extends State<MyHomePage>
     Bean(name: 'AnimatedContainer', routeName: Routes.animatedContainerPage),
     Bean(name: 'AnimatedSwitcher', routeName: Routes.animatedSwitcherPage),
     Bean(name: 'AnimatedIcon', routeName: Routes.animatedIconPage),
+    Bean(
+        name: 'AnimatedModalBarrier',
+        routeName: Routes.animatedModalBarrierPage),
+    Bean(name: 'AnimatedList', routeName: Routes.animatedListPage),
+    Bean(name: 'HeroFirstPage', routeName: Routes.heroFirstPage),
   ];
 
   void _doSomething() {

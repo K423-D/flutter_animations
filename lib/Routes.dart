@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 11:37:50
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-22 18:16:37
+ * @LastEditTime : 2020-06-23 14:25:44
  * @FilePath     : \flutter_animations\lib\Routes.dart
  */
 import 'package:flutter/material.dart';
@@ -13,9 +13,13 @@ import 'package:flutteranimations/animated_builder_page.dart';
 import 'package:flutteranimations/animated_container.dart';
 import 'package:flutteranimations/animated_cross_fade.dart';
 import 'package:flutteranimations/animated_icon.dart';
+import 'package:flutteranimations/animated_list.dart';
+import 'package:flutteranimations/animated_modal_barrier.dart';
 import 'package:flutteranimations/animated_opacity.dart';
 import 'package:flutteranimations/animated_padding.dart';
 import 'package:flutteranimations/animated_switcher.dart';
+import 'package:flutteranimations/hero/hero_first_page.dart';
+import 'package:flutteranimations/hero/hero_second_page.dart';
 import 'package:flutteranimations/home_page.dart';
 
 class Routes {
@@ -29,6 +33,10 @@ class Routes {
   static final animatedContainerPage = '/animatedContainer';
   static final animatedSwitcherPage = '/animatedSwitcher';
   static final animatedIconPage = '/animatedIcon';
+  static final animatedModalBarrierPage = '/animatedModalBarrier';
+  static final animatedListPage = '/animatedList';
+  static final heroFirstPage = '/heroFirst';
+  static final heroSecondPage = '/heroSecond';
 
   static Map<String, WidgetBuilder> routes = {
     home: (context) => MyHomePage(title: 'animation 基本用法'),
@@ -41,5 +49,9 @@ class Routes {
     animatedContainerPage: (context) => AnimatedContainerPage(),
     animatedSwitcherPage: (context) => AnimatedSwitcherPage(),
     animatedIconPage: (context) => AnimatedIconPage(),
+    animatedModalBarrierPage: (context) => AnimatedModalBarrierPage(),
+    animatedListPage: (context) => AnimatedListPage(),
+    heroFirstPage: (context) => HeroFirstPage(),
+    heroSecondPage: (context) => HeroSecondPage(),
   };
 }
