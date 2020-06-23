@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 18:03:25
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-22 18:19:50
+ * @LastEditTime : 2020-06-23 17:52:36
  * @FilePath     : \flutter_animations\lib\animated_icon.dart
  */
 import 'package:flutter/material.dart';

@@ -77,7 +77,10 @@ class _AlignTransitionPageState extends State<AlignTransitionPage>
                       _isActived = !_isActived;
                     });
                   },
-                  child: Text('改变动画状态'),
+                  child: Text(
+                    '改变动画状态',
+                    style: TextStyle(color: Colors.white),
+                  ),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50))),
             )

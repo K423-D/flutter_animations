@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-23 13:33:32
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-23 15:07:45
+ * @LastEditTime : 2020-06-23 15:22:46
  * @FilePath     : \flutter_animations\lib\hero\hero_second_page.dart
  */
 import 'package:flutter/cupertino.dart';
@@ -37,13 +37,21 @@ class _HeroSecondPageState extends State<HeroSecondPage> {
           ? Center(
               child: CupertinoActivityIndicator(),
             )
-          : Center(
-              child: Hero(
-                tag: 'Hero$_index',
-                child: Container(
-                  child: Image.asset('assets/books-$_index.jpg'),
+          : Column(
+              children: <Widget>[
+                Hero(
+                  tag: 'Hero$_index',
+                  child: Container(
+                    child: Image.asset('assets/books-$_index.jpg'),
+                  ),
                 ),
-              ),
+                SizedBox(height: 40),
+                Container(
+                  child: Center(
+                    child: Text('传过来的参数：$_index'),
+                  ),
+                )
+              ],
             ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

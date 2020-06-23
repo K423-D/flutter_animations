@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 15:48:59
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-22 16:08:02
+ * @LastEditTime : 2020-06-23 17:52:16
  * @FilePath     : \flutter_animations\lib\animated_align.dart
  */
 import 'dart:math';
@@ -16,7 +16,7 @@ class AnimatedAlignPage extends StatefulWidget {
 }
 
 class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
-  Alignment _alignment = Alignment.bottomLeft;
+  Alignment _alignment = Alignment.center;
   List<Alignment> _list = [
     Alignment.bottomCenter,
     Alignment.bottomLeft,
@@ -64,7 +64,10 @@ class _AnimatedAlignPageState extends State<AnimatedAlignPage> {
                     _alignment = _list[index()];
                   });
                 },
-                child: Text('随机一个align'),
+                child: Text(
+                  '随机一个align',
+                  style: TextStyle(color: Colors.white),
+                ),
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),

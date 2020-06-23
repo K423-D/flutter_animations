@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 16:12:28
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-22 16:27:32
+ * @LastEditTime : 2020-06-23 17:53:12
  * @FilePath     : \flutter_animations\lib\animated_padding.dart
  */
 import 'dart:math';
@@ -50,7 +50,7 @@ class _AnimatedPaddingPageState extends State<AnimatedPaddingPage> {
                     _padding = Random().nextDouble() * 80 + 20;
                   });
                 },
-                child: Text('随机一个水平padding'),
+                child: Text('随机一个水平padding',style: TextStyle(color: Colors.white),),
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),

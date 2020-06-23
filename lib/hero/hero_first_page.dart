@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-23 13:22:16
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-23 15:08:07
+ * @LastEditTime : 2020-06-23 15:21:18
  * @FilePath     : \flutter_animations\lib\hero\hero_first_page.dart
  */
 import 'package:flutter/material.dart';
@@ -66,21 +66,17 @@ class ImageItem extends StatelessWidget {
               ),
               SizedBox(width: 10),
               Text(
-                '返回的信息：$result',
+                '返回的信息：${result ?? '空'}',
                 style: TextStyle(color: Colors.white),
               ),
             ],
           ),
-          duration: Duration(seconds: 2),
+          duration: Duration(seconds: 1),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           backgroundColor: Colors.black,
           behavior: SnackBarBehavior.floating,
-          action: SnackBarAction(
-              label: '我知道了',
-              onPressed: () {
-                print('点击了 我知道了');
-              }),
+          action: SnackBarAction(label: '我知道了', onPressed: () {}),
         );
         Scaffold.of(context).showSnackBar(snackBar);
       },

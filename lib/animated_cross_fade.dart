@@ -119,7 +119,7 @@ class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage> {
                     _showSecond = !_showSecond;
                   });
                 },
-                child: Text('切换组件'),
+                child: Text('切换组件',style: TextStyle(color: Colors.white),),
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),

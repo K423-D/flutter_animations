@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-23 10:29:20
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-23 11:52:15
+ * @LastEditTime : 2020-06-23 17:55:50
  * @FilePath     : \flutter_animations\lib\animated_list.dart
  */
 import 'package:flutter/material.dart';
@@ -15,7 +15,7 @@ class AnimatedListPage extends StatefulWidget {
 
 class _AnimatedListPageState extends State<AnimatedListPage>
     with SingleTickerProviderStateMixin {
-  List<String> _list = [];
+  List<String> _list = ['0', '1', '2'];
   AnimationController _controller;
   final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
 
@@ -66,7 +66,10 @@ class _AnimatedListPageState extends State<AnimatedListPage>
             onPressed: () {
               _addItem();
             },
-            child: Text('add item'),
+            child: Text(
+              'add item',
+              style: TextStyle(color: Colors.white),
+            ),
             color: Theme.of(context).primaryColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -75,7 +78,10 @@ class _AnimatedListPageState extends State<AnimatedListPage>
             onPressed: () {
               _removeItem();
             },
-            child: Text('remove item'),
+            child: Text(
+              'remove item',
+              style: TextStyle(color: Colors.white),
+            ),
             color: Theme.of(context).primaryColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),

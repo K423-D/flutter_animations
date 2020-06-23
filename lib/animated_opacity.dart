@@ -48,7 +48,7 @@ class _AnimatedOpacityPageState extends State<AnimatedOpacityPage> {
                     _opacity = (_opacity + 0.6) % 1;
                   });
                 },
-                child: Text('切换透明度(步进0.6)'),
+                child: Text('切换透明度(步进0.6)',style: TextStyle(color: Colors.white),),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
                 color: Theme.of(context).primaryColor,

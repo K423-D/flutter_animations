@@ -62,7 +62,10 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
                     _current = (_current + 1) % 2;
                   });
                 },
-                child: Text('切换样式'),
+                child: Text(
+                  '切换样式',
+                  style: TextStyle(color: Colors.white),
+                ),
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),

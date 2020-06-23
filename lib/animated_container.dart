@@ -54,7 +54,10 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
                     _isChanged = !_isChanged;
                   });
                 },
-                child: Text('切换样式'),
+                child: Text(
+                  '切换样式',
+                  style: TextStyle(color: Colors.white),
+                ),
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),

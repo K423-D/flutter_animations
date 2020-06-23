@@ -3,7 +3,7 @@
  * @Author       : k423
  * @Date         : 2020-06-22 09:57:01
  * @LastEditors  : k423
- * @LastEditTime : 2020-06-23 13:55:28
+ * @LastEditTime : 2020-06-23 17:59:24
  * @FilePath     : \flutter_animations\lib\home_page.dart
  */
 import 'package:flutter/material.dart';
@@ -30,8 +30,8 @@ class _MyHomePageState extends State<MyHomePage>
   // 动画控制器
   AnimationController _controller;
   // 动画
-  Animation _animation;
-  Animation _animation1;
+  Animation _sizeAni;
+  Animation _colorAni;
   List<Bean> _list = [
     Bean(name: 'AnimatedBuilder', routeName: Routes.animatedBuilderPage),
     Bean(name: 'AlignTransition', routeName: Routes.alignTransitionPage),
@@ -75,13 +75,13 @@ class _MyHomePageState extends State<MyHomePage>
       setState(() {});
     });
     // 设置动画曲线
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
-    _animation1 = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+    _sizeAni = CurvedAnimation(parent: _controller, curve: Interval(0.0, 0.5));
+    _colorAni = CurvedAnimation(parent: _controller, curve: Interval(0.5, 1.0));
     // 设置开始与结束的值
-    _animation = Tween(begin: 100.0, end: 150.0).animate(_animation);
-    _animation1 =
-        ColorTween(begin: Colors.lightBlueAccent, end: Colors.redAccent)
-            .animate(_animation1);
+    _sizeAni = Tween(begin: 120.0, end: 240.0).animate(_sizeAni);
+    _colorAni =
+        ColorTween(begin: Colors.lightBlueAccent, end: Colors.amberAccent)
+            .animate(_colorAni);
   }
 
   @override
@@ -96,23 +96,32 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Center(
-            child: Container(
-              color: _animation1.value,
-              width: _animation.value,
-              height: _animation.value,
-              child: Center(child: Text('动画组件')),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            SizedBox(height: 20),
+            Center(
+              child: Container(
+                width: _sizeAni.value,
+                height: _sizeAni.value,
+                child: Center(child: Text('组合动画组件')),
+                decoration: BoxDecoration(
+                  color: _colorAni.value,
+                  shape: BoxShape.rectangle,
+                  border: Border.all(color: Colors.black, width: 2),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
             ),
-          ),
-          Wrap(
-            spacing: 10,
-            alignment: WrapAlignment.center,
-            children: _buildActionChips(),
-          )
-        ],
+            SizedBox(height: 50),
+            Wrap(
+              spacing: 10,
+              alignment: WrapAlignment.start,
+              children: _buildActionChips(),
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor:
